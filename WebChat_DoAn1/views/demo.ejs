@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var socket=io("http://localhost:3000");
+		socket.on('receive_messenger',function(data){
+			alert(data);
+		});
+		$(document).ready(function(){
+			$('#con').click(function(){
+				$.get('/demo/socketVSajax',{socketID:socket.id},function(data){
+					console.log(data);
+					console.log(socket);
+				});
+			});
+			$('#con1').click(function(){
+				socket.emit('send_messenger');
+			});
+		});
+	</script>
+</head>
+<body>
+	<button id="con">conn</button>
+	<button id="con1">con1</button>
+	<div style="font-weight: normal">a s\nd f</div>
+</body>
+</html>

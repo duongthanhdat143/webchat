@@ -1,0 +1,212 @@
+#Content #BanBe{
+	background-color: white;
+	float:left;
+	width: 30%;
+	height: 550px;
+	margin-left: 1%;
+	border:2px solid green;
+}
+#BanBe #TieuDeDsBan{
+	color: green;
+	font-size: 150%;
+	height: 30px;
+}
+#BanBe #DsBan{
+	overflow: scroll;
+	height: 500px;
+	width: 100%;
+}
+.friend{
+	width: 100%;
+	background-color: #f8faf7;
+	margin: 5px auto;
+	height: 50px;
+	border-radius: 30px;
+}
+.friend #hinhanh{
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+.friend #hinhanh img{
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+}
+.friend #thongtin{
+	height: 100%;
+	float: left;
+	width: 80%;
+}
+.friend #thongtin #ten{
+	height: 50%;
+	width: 100%;
+	font-size: 150%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.friend #thongtin #hoatdong{
+	width: 100%;
+	height: 50%;
+	font-size: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.friend:hover{
+	background-color: grey;
+	cursor: pointer;
+}
+
+#Content #CuocTroChuyen{
+	background-color: white;
+	width: 30%;
+	height: 550px;
+	float: right;
+	margin-right: 1%;
+	border:2px solid green;
+}
+#CuocTroChuyen #TieuDeDsTroChuyen{
+	color: green;
+	font-size: 150%;
+	height: 30px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#CuocTroChuyen #DsTroChuyen{
+	overflow: scroll;
+	height: 500px;
+	width: 100%;
+}
+.conversation{
+	width: 100%;
+	background-color: #f8faf7;
+	margin: 5px auto;
+	height: 50px;
+	border-radius: 30px;
+}
+.conversation #hinhanh{
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+.conversation #hinhanh img{
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+}
+.conversation #thongtin{
+	height: 100%;
+	float: left;
+	width: 80%;
+}
+.conversation #thongtin #ten{
+	height: 50%;
+	width: 100%;
+	font-size: 150%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.conversation #thongtin #lastMes{
+	width: 100%;
+	height: 50%;
+	font-size: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.conversation:hover{
+	background-color: grey;
+	cursor: pointer;
+}
+
+#KhungChat{
+	background-color: white;
+	height: 550px;
+	width: 30%;
+	padding: 5px;
+	margin-left: 3%;
+	float: left;
+	position: relative;
+	z-index:-1;
+}
+#KhungChat #HeaderChatBox{
+	border:1px solid green;
+	margin-bottom: 5px;
+	height: 30px;
+	margin-bottom: 5px;
+}
+#KhungChat #HeaderChatBox #AnhNguoiChat{
+	height: 100%;
+	width: 10%;
+	float: left;
+	cursor: pointer;
+}
+#KhungChat #HeaderChatBox #AnhNguoiChat img{
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+}
+#KhungChat #HeaderChatBox #TenNguoiChat{
+	height: 100%;
+	width: 90%;
+	font-size: 150%;
+	float: left;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#KhungChat #NoiDungChat{
+	border:1px solid green;
+	height: 400px;
+	margin-bottom: 5px;
+	overflow-y: scroll;
+	padding-bottom: 20px;
+}
+#sendMes #inputMes{
+	border:1px solid black;
+	resize: none;
+	overflow: hidden;
+	float: left;
+	width: 60%;
+}
+#sendMes #Gui{
+	height: 50px;
+	width: 30%;
+	float: left;
+	margin-left: 5px;
+}
+#sendMes #icon{
+	clear: both;
+	cursor: pointer;
+	background-color: greenyellow;
+	width: fit-content;
+	position: relative;
+}
+#sendMes #icon:hover{
+	background-color: green;
+}
+#sendMes #icon #listIcon{
+	width: 200px;
+	height: 200px;
+	border: 1px solid green;
+	display: none;
+	position: absolute;
+	z-index: 1;
+	top:-200px;
+	background-color: white;
+}
+#sendMes #icon #listIcon div{
+	float: left;
+	font-size: 150%;
+	cursor: pointer;
+	margin:5px;
+}
+#sendMes #icon #listIcon div:hover{
+	box-shadow: 5px 10px 18px red;
+}
+
+

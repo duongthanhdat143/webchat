@@ -1,0 +1,73 @@
+#ThongBao{
+	color:red;
+	font-size: 100%;
+	text-align: center;
+}
+#login{
+	border:5px solid green;
+	width: 250px;
+	height: 400px;
+	padding: 40px;
+	padding-top: 0px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+#login form input[type="text"]{
+	display: block;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+#login form input[type="password"]{
+	display: block;
+	padding: 10px;
+}
+#login form input[name="login"]{
+	display: block;
+	margin:auto;
+	background-color: green;
+	color: white;
+	padding: 14px 40px;
+	border:none;
+	outline: none;
+}
+#login form input[name="showPass"]{
+	margin-top: 0px;
+	display: block;
+	border:none;
+	outline: none;
+	color: green;
+	background-color: white;
+	margin-right: 0px;
+	margin-bottom: 10px;
+}
+#login h1{
+	text-align: center;
+	color: red;
+	margin-top: 0px;
+}
+#login a{
+	text-align: left;
+	display: block;
+	margin-top: 20px;
+}
+#logo{
+	background-color: green;
+	font-size: 250%;
+	text-align: center;
+	color: white;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	top:0px;
+}
+#login form input[name="showPass"]:hover{
+	text-decoration:underline;
+}
+#login a:hover{
+	color: red;
+}
+#login form input[name="login"]:hover{
+	background-color: red;
+}

@@ -1,0 +1,198 @@
+body{
+	margin:0px;
+	background-color: #d8dce3; 
+}
+#Header{
+	background-color: green;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+}
+#Header #logo{
+	height: 100%;
+	font-size: 200%;
+	float: left;
+	margin-right: 2%;
+	color: white;
+	margin-top: 0.5%;
+}
+#Header #TimKiem{
+	height: 100%;
+	width: 20%;
+	margin-right:2%;
+	float: left;
+	position: relative;
+}
+#TimKiem input[name="TimKiem"]{
+	width: 100%;
+	height: 50%;
+	border-radius: 30px;
+	outline: none;
+	margin-top: 3%;
+	padding-left: 3%;
+}
+#TimKiem #filterTimKiem{
+	height: 200px;
+	width: 150%;
+	background-color:white;
+	overflow-y: scroll;
+	display: none;
+	z-index: 1;
+	position: absolute;
+	border: 1px solid green;
+}
+#filterTimKiem a .friend{
+	width: 100%;
+	background-color:white;
+	margin: 5px auto;
+	height: 50px;
+	border-radius: 30px;
+}
+#filterTimKiem a .friend #hinhanh{
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+#filterTimKiem a .friend #hinhanh img{
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+}
+#filterTimKiem a .friend #thongtin{
+	height: 100%;
+	float: left;
+	width: 80%;
+	position: relative;
+}
+#filterTimKiem a .friend #thongtin #ten{
+	height: fit-content;
+	width: 100%;
+	font-size: 150%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	color:black;
+	top:20%;
+	position: absolute;
+}
+#filterTimKiem a .friend:hover{
+	background-color: grey;
+	cursor: pointer;
+}
+#Header #HinhTaiKhoanChinh{
+	width: 40px;
+	height: 100%;
+	float: left;
+	margin-right:2%;
+	cursor: pointer;
+}
+#HinhTaiKhoanChinh img{
+	border-radius: 50%;
+	width: 100%;
+	height: 70%;
+	margin-top:10%;
+}
+#Header #TinNhan{
+	float: left;
+	height: 100%;
+	width: 40px;
+	cursor: pointer;
+	margin-right: 2%;
+}
+#TinNhan #Image{
+	width: 100%;
+	height: 70%;
+}
+#TinNhan #Image i{
+	font-size: 250%;
+	color: white;
+}
+#TinNhan #numberMesNotSeen{
+	width: fit-content;
+	color: white;
+	margin: auto;
+	background-color: red;
+}
+#TinNhan #MesNotSeen{
+	background-color: white;
+	height: 200px;
+	width: 500%;
+	display: none;
+	border: 1px solid green;
+	overflow-y: scroll;
+	cursor: auto;
+}
+#MesNotSeen .conversation{
+	width: 100%;
+	background-color: #f8faf7;
+	margin: 5px auto;
+	height: 50px;
+	border-radius: 30px;
+}
+#MesNotSeen .conversation #hinhanh{
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+#MesNotSeen .conversation #hinhanh img{
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+}
+#MesNotSeen .conversation #thongtin{
+	height: 100%;
+	float: left;
+	width: 80%;
+}
+#MesNotSeen .conversation #thongtin #ten{
+	height: 50%;
+	width: 100%;
+	font-size: 150%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#MesNotSeen .conversation #thongtin #lastMes{
+	width: 100%;
+	height: 50%;
+	font-size: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#MesNotSeen .conversation:hover{
+	background-color: grey;
+}
+#Header #BanBe{
+	float: left;
+	height: 100%;
+	cursor: pointer;
+	margin-right: 2%;
+}
+#BanBe i{
+	font-size: 250%;
+	color:white;
+}
+#Header #logout{
+	float: left;
+	height: 100%;
+	cursor: pointer;
+}
+#logout button{
+	margin-top: 15%;
+	background: none;
+	border-color: white;
+	cursor:pointer;
+}
+#logout button i{
+	color: white;
+	font-size: 250%;
+}
+#Content{
+	margin-top: 60px;
+}
+
+#Header #HinhTaiKhoanChinh:hover,#Header #TinNhan:hover,#Header #BanBe:hover,#Header #logout:hover{
+	background-color: #003007;
+}

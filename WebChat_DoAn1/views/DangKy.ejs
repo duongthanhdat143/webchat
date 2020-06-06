@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/css/DangKy/DangKyStyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/script/DangKyScript.js" ></script>
+</head>
+<body>
+	<div id="logo">ChatTalk</div>
+	<div id="DangKy">
+		<form id="formDangKy" action="/dangky" method="Post">
+			<h1>Đăng ký</h1>
+			<div id="ThongBaoUsername" class="ThongBao"></div>
+			<div id="ThongBaoRePass" class="ThongBao"></div>
+			<b>Tên đăng nhập:</b>
+			<input type="text" name="username" required="true" autocomplete="off">
+			<b>Mật khẩu:</b>
+			<input type="password" name="password" required="true" autocomplete="off">
+			<b>Xác nhận mật khẩu:</b>
+			<input type="text" name="re_password" required="true" autocomplete="off" disabled="true">
+			<input type="submit" name="DangKy" value="Đăng ký">
+		</form>
+		<a href="/dangnhap">Đăng nhập</a>
+	</div>
+</body>
+</html>

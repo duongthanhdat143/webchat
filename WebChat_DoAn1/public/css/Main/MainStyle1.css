@@ -1,0 +1,68 @@
+#NoiDungChat .mesGui{
+	clear:both;
+	float:right;
+	margin-top: 30px;
+	margin-right: 5px;
+	background-color: white;
+	max-width: 50%;
+}
+#NoiDungChat .mesNhan{
+	clear:both;
+	float:left;
+	margin-top: 20px;
+	margin-left: 5px;
+	max-width: 50%;
+}
+.mesGui #tgGui{
+	font-size: 70%;
+	color:black;
+	text-align: center;
+	display: none;
+}
+.mesNhan #tgGui{
+	font-size: 70%;
+	color:black;
+	text-align: center;
+}
+.mesGui #mes{
+	border-radius: 30px;
+	padding:10px;
+	color:white;
+	word-break: break-word;
+	display: block;
+	background-color: green;
+	border-radius: 5px;
+	float:right;
+}
+.mesNhan #mes{
+	border-radius: 30px;
+	padding:10px;
+	color:black;
+	word-break: break-word;
+	display: inline-block;
+	background-color: grey;
+	border-radius: 5px;
+}
+.mesGui #tgXem{
+	font-size: 70%;
+	color:red;
+	text-align: center;
+	clear: both;
+	float: right;
+}
+.mesNhan #tgXem{
+	font-size: 70%;
+	color:red;
+	text-align: center;
+	display: none;
+}
+
+.mesGui:hover #tgGui{
+	display: block;
+}
+.mesNhan:hover #tgXem{
+	display: block;
+}
+
+
+

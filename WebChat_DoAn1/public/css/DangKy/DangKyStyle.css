@@ -1,0 +1,64 @@
+body{
+
+}
+#DangKy{
+	border:5px solid green;
+	width: 250px;
+	height: 350px;
+	padding: 40px;
+	padding-top: 0px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+#DangKy form input[type="text"]{
+	display: block;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+#DangKy form input[type="password"]{
+	display: block;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+#DangKy form input[name="DangKy"]{
+	display: block;
+	margin:auto;
+	background-color: green;
+	color: white;
+	padding: 14px 40px;
+	border:none;
+	outline: none;
+}
+#DangKy form h1{
+	text-align: center;
+	color: red;
+	margin-top: 0px;
+}
+#DangKy form b{
+	color: green;
+}
+#logo{
+	background-color: green;
+	font-size: 250%;
+	text-align: center;
+	color: white;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	top:0px;
+}
+#DangKy form input[name="DangKy"]:hover{
+	background-color: red;
+}
+#DangKy form .ThongBao{
+	color: red;
+	margin-top:0px;
+}
+#DangKy form{
+	margin-bottom: 10px;
+}
+#DangKy a:hover{
+	color: red;
+}

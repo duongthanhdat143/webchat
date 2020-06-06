@@ -1,0 +1,87 @@
+#TrangTimNguoi{
+	width: 600px;
+	height: 580px;
+	margin: auto;
+	background-color: white;
+}
+#TrangTimNguoi h1{
+	background-color: green;
+	color: white;
+	text-align: center;
+}
+#TrangTimNguoi #HinhDaiDien{
+	height: 100px;
+	width: 100%;
+}
+#HinhDaiDien img{
+	border-radius: 50%;
+	height: 100%;
+	width: 100px;
+	margin: 0 auto;
+	display: block;
+	border: 1px solid green;
+}
+#TrangTimNguoi #TenNguoiDung{
+	width: 100%;
+	color:green;
+	font-size: 250%;
+	text-align: center;
+	word-break: break-word;
+}
+#ChucNang{
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#ChucNang button{
+	height: 30px;
+	text-align: center;
+}
+#TrangTimNguoi h3{
+	margin-top: 40px;
+	color: green;
+}
+#TrangTimNguoi #DsBan{
+	height: 280px;
+	width: 300px;
+	overflow-y: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.friend{
+	width: 100%;
+	background-color: #f8faf7;
+	margin: 5px auto;
+	height: 50px;
+	border-radius: 30px;
+}
+.friend #hinhanh{
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+.friend #hinhanh img{
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+}
+.friend #thongtin{
+	height: 100%;
+	float: left;
+	width: 80%;
+}
+.friend #thongtin #ten{
+	height: 100%;
+	width: 100%;
+	font-size: 250%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	color:black;
+}
+.friend:hover{
+	background-color: grey;
+	cursor: pointer;
+}

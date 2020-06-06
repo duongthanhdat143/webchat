@@ -1,0 +1,73 @@
+<link rel="stylesheet" type="text/css" href="/css/TrangCaNhan/TrangCaNhanStyle.css">
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+	var user = JSON.parse('<%- JSON.stringify(curUser) %>');
+</script>
+<script type="text/javascript" src="/script/TrangCaNhan/TrangCaNhanScript.js"></script>
+<script type="text/javascript" src="/script/TrangCaNhan/TrangCaNhan_MasterPage.js"></script>
+<script type="text/javascript" src="/script/TrangCaNhan/TrangCaNhanSocketEvent.js"></script>
+<script type="text/javascript" src="/script/TrangCaNhan/TrangCaNhanModuleSocketEvent.js"></script>
+<script type="text/javascript" src="/script/TrangCaNhan/TrangCaNhanModuleAddHtml.js"></script>
+<script type="text/javascript" src="/script/TrangCaNhan/TrangCaNhanModule.js"></script>
+
+<div id="TrangCaNhan">
+	<h1>ChatTalk</h1>
+	<div id="HinhDaiDien">
+		<img src="/HinhAnh/<%=curUser['AVATAR']%>">
+	</div>
+	<div id="TenNguoiDung"><%=curUser.ID%></div>
+	<div id="ChucNang">
+		<button id="changeAvatar">Thay đổi ảnh đại diện</button>
+		<button id="changePass">Thay đổi mật khẩu</button>
+	</div>
+	<h3>Danh sách bạn bè</h3>
+	<div id="DsBan">
+		<%
+			friends.forEach(e=>{%>
+				<a href="/tim-nguoi/<%-e['ID']%>">
+					<div class="friend" id="<%-e['ID']%>">
+						<div id="hinhanh">
+							<img src="/HinhAnh/<%-e['AVATAR']%>">
+						</div>
+						<div id="thongtin">
+							<div id="ten"><%-e['ID']%></div>						
+						</div>
+					</div>
+				</a>
+			<%});
+		%>
+	</div>
+</div>
+
+
+<div id="ThayDoiAnhDaiDien">
+	<div id="formThayDoiAvatar">
+		<h2>Thay đổi ảnh đại diện</h2>
+		<img src="" id="AvatarPreview">
+		<form method="Post" enctype="multipart/form-data">
+			<input type="file" name="Avatar" id="Avatar" accept="image/*">
+			<input type="submit" name="">
+		</form>
+		<button id="Cancel">Đóng(X)</button>
+	</div>
+</div>
+
+<div id="ThayDoiMatKhau">
+	<div id="formThayDoiPass">
+		<h2>Thay đổi mật khẩu</h2>
+		<div id="ThongBao"></div>
+		<div id="formChangePass">
+			<div>Mật khẩu hiện tại:</div>
+			<input type="password" name="curPass" required="true" autocomplete="off">
+			<div>Mật khẩu mới:</div>
+			<input type="password" name="newPass" required="true" autocomplete="off">
+			<div>Nhập lại mật khẩu mới:</div>
+			<input type="text" name="previewPass" required="true" autocomplete="off">
+			<input type="button" name="submitNewPass" value="Gửi">
+		</div>
+		<button id="Cancel">Đóng(X)</button>
+	</div>
+</div>

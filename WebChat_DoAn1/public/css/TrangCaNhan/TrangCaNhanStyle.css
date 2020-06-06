@@ -1,0 +1,187 @@
+#TrangCaNhan{
+	width: 600px;
+	height: 580px;
+	margin: auto;
+	background-color: white;
+}
+#TrangCaNhan h1{
+	background-color: green;
+	color: white;
+	text-align: center;
+}
+#TrangCaNhan #HinhDaiDien{
+	height: 100px;
+	width: 100%;
+}
+#HinhDaiDien img{
+	border-radius: 50%;
+	height: 100%;
+	width: 100px;
+	margin: 0 auto;
+	display: block;
+	border: 1px solid green;
+}
+#TrangCaNhan #TenNguoiDung{
+	width: 100%;
+	color:green;
+	font-size: 250%;
+	text-align: center;
+	word-break: break-word;
+}
+#ChucNang{
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#ChucNang button{
+	height: 30px;
+	text-align: center;
+}
+#TrangCaNhan h3{
+	margin-top: 40px;
+	color: green;
+}
+#TrangCaNhan #DsBan{
+	height: 280px;
+	width: 300px;
+	overflow-y: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.friend{
+	width: 100%;
+	background-color: #f8faf7;
+	margin: 5px auto;
+	height: 50px;
+	border-radius: 30px;
+}
+.friend #hinhanh{
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+.friend #hinhanh img{
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+}
+.friend #thongtin{
+	height: 100%;
+	float: left;
+	width: 80%;
+}
+.friend #thongtin #ten{
+	height: 100%;
+	width: 100%;
+	font-size: 250%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	color:black;
+}
+.friend:hover{
+	background-color: grey;
+	cursor: pointer;
+}
+
+
+
+#ThayDoiAnhDaiDien{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 1;
+	display: none;
+	padding-top: 100px;
+}
+#ThayDoiAnhDaiDien #formThayDoiAvatar{
+	width: 500px;
+	height: 350px;
+	margin:auto;
+	background-color: white;
+}
+#ThayDoiAnhDaiDien #formThayDoiAvatar h2{
+	color: white;
+	background-color: green;
+	text-align: center;
+}
+#ThayDoiAnhDaiDien #AvatarPreview{
+	width: 90%;
+	height: 200px;
+	display: block;
+	margin: auto;
+}
+#ThayDoiAnhDaiDien form input[type="submit"]{
+	height: 50px;
+	width: 100px;
+	text-align: center;
+	float: right;
+	margin-top: 20px;
+	background-color: green;
+	color:white;
+}
+#ThayDoiAnhDaiDien #Cancel{
+	background-color: red;
+	color: white;
+	width: 100px;
+	height: 50px;
+	text-align: center;
+}
+#ThayDoiMatKhau{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 1;
+	display: none;
+	padding-top: 100px;
+}
+#ThayDoiMatKhau #formThayDoiPass{
+	width: 500px;
+	height: 500px;
+	margin:auto;
+	background-color: white;
+}
+#ThayDoiMatKhau #formThayDoiPass h2{
+	color: white;
+	background-color: green;
+	text-align: center;
+}
+#formThayDoiPass div{
+	color: green;
+	font-size: 150%;
+}
+#formThayDoiPass #ThongBao{
+	color: red;
+	margin: auto;
+}
+#formThayDoiPass input[type="password"],#formThayDoiPass input[type="text"]{
+	height: 30px;
+	width: 90%;
+	margin-top: 0px;
+	font-size: 150%;
+}
+#formThayDoiPass input[type="button"]{
+	height: 50px;
+	width: 100px;
+	text-align: center;
+	float: right;
+	margin-top: 20px;
+	background-color: green;
+	color:white;	
+}
+#formThayDoiPass #Cancel{
+	background-color: red;
+	color: white;
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	margin-top: 20px;
+}

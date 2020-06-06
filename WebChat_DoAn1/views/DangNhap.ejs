@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/css/DangNhap/DangNhapStyle.css">
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/script/DangNhapScript.js" ></script>
+
+</head>
+<body>
+	<div id="logo">ChatTalk</div>
+	<div id="login">
+		<h1>Đăng nhập</h1>
+		<div id="ThongBao"><%=error%></div>
+		<form action="/dangnhap" method="Post" id="formDangNhap">
+			<b>Tên đăng nhập:</b>
+			<input type="text" name="username" autocomplete="off">
+			<b>Mật khẩu:</b>
+			<input type="password" name="password" autocomplete="off">
+			<input type="button" name="showPass" value="Hiện mật khẩu">
+			<input type="submit" name="login" value="Đăng nhập">
+		</form>
+		<a href="">Quên mật khẩu</a>
+		<a href="/dangky">Tạo tài khoản mới</a>
+	</div>
+</body>
+</html>

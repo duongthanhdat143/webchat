@@ -1,0 +1,43 @@
+<link rel="stylesheet" type="text/css" href="/css/TrangTimNguoi/TrangTimNguoiStyle.css">
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+	var user = JSON.parse('<%- JSON.stringify(curUser) %>');
+</script>
+<script type="text/javascript" src="/script/TrangTimNguoi/TrangTimNguoiScript.js"></script>
+<script type="text/javascript" src="/script/TrangTimNguoi/TrangTimNguoi_MasterPage.js"></script>
+<script type="text/javascript" src="/script/TrangTimNguoi/TrangTimNguoiModule.js"></script>
+<script type="text/javascript" src="/script/TrangTimNguoi/TrangTimNguoiModuleAddHtml.js"></script>
+<script type="text/javascript" src="/script/TrangTimNguoi/TrangTimNguoiModuleSocketEvent.js"></script>
+<script type="text/javascript" src="/script/TrangTimNguoi/TrangTimNguoiSocketEvent.js"></script>
+
+
+<div id="TrangTimNguoi">
+	<h1>ChatTalk</h1>
+	<div id="HinhDaiDien">
+		<img src="/HinhAnh/<%=nguoi['AVATAR']%>">
+	</div>
+	<div id="TenNguoiDung"><%=nguoi.ID%></div>
+	<div id="ChucNang">
+		<button id="changeAvatar">Thay đổi ảnh đại diện</button>
+		<button id="changePass">Thay đổi mật khẩu</button>
+	</div>
+    <h3>Danh sách bạn bè</h3>
+    <div id="DsBan">
+		<%
+			friends.forEach(e=>{%>
+				<a href="/tim-nguoi/<%-e['ID']%>">
+					<div class="friend" id="<%-e['ID']%>">
+						<div id="hinhanh">
+							<img src="/HinhAnh/<%-e['AVATAR']%>">
+						</div>
+						<div id="thongtin">
+							<div id="ten"><%-e['ID']%></div>						
+						</div>
+					</div>
+				</a>
+			<%});
+		%>
+	</div>
+</div>

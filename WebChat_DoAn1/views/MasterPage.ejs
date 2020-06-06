@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/Master/MasterStyle.css">
+	<%- style %>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/script/Master/MasterScript.js" ></script>
+	<script type="text/javascript" src="/script/Master/AddHtmlMaster.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<%- script%>
+</head>
+
+<body>
+	<div id="Header">
+		<div id="logo">ChatTalk</div>
+		<div id="TimKiem">
+			<input type="text" name="TimKiem" placeholder="Tìm kiếm mọi người...">
+			<div id="filterTimKiem"></div>
+		</div>
+		<div id="HinhTaiKhoanChinh">
+			<a href="/trang-ca-nhan"><img src="/HinhAnh/<%=curUser['AVATAR']%>"></a>
+		</div>
+		<div id="TinNhan">
+			<div id="Image"><a href="/"><i class='far fa-comment'></i></a></div>
+			<div id="numberMesNotSeen"><%=conversNotSeen.length%> </div>
+			<div id="MesNotSeen">
+				<%
+					conversNotSeen.forEach(e=>{%>
+							<div class="conversation" id="<%-e['CONVERSID']%>">
+								<div id="hinhanh">
+									<%if(e['AVATAR']!=null){%>
+										<img src="/HinhAnh/<%-e['AVATAR']%>">
+									<%}else{%>
+										<img src="/HinhAnh/default.jpg">
+									<%}%>
+								</div>
+								<div id="thongtin">
+									<div id="receiverID" hidden="true"><%-e['RECEIVER']%></div>
+									<%if(e['RECEIVER']!=null){%>
+										<div id="ten"><%-e['RECEIVER']%></div>
+									<%}else{%>
+										<div id="ten">Không xác định</div>
+									<%}%>
+									<div id="lastMes"><%-e['LASTMES'].replace(/<br>/g,' ')%></div>
+								</div>
+							</div>		
+						<%});
+				%>
+			</div>
+		</div>
+		<div id="BanBe">
+			<a href=""><i class='fas fa-user-friends'></i></a>
+		</div>
+		<div id="logout">
+			<form action="/dangxuat" method="post">
+				<button type="submit"><i class='fas fa-sign-out-alt'></i></button>
+			</form>
+		</div>
+	</div>
+	<div id="Content">
+		<%- body%>
+	</div>
+</body>
+</html>

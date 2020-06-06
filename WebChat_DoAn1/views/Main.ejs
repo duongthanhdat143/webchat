@@ -1,0 +1,115 @@
+<link rel="stylesheet" type="text/css" href="/css/Main/MainStyle.css">
+<link rel="stylesheet" type="text/css" href="/css/Main/MainStyle1.css">
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+	var user = JSON.parse('<%- JSON.stringify(curUser) %>');
+	var expireTime=new Date("<%=expireTime%>");
+</script>
+<script src="/script/Main/MainSocketEvent.js"></script>
+<script src="/script/Main/MainModule.js"></script>
+<script src="/script/Main/MainScript.js"></script>
+<script src="/script/Main/MainModuleAddHtml.js"></script>
+<script src="/script/Main/MainModuleSocketEvent.js"></script>
+<script src="/script/Main/Main_MasterPage.js"></script>
+
+
+
+<div id="BanBe">
+	<center><div id="TieuDeDsBan">Bạn bè</div></center>
+	<hr/>
+	<div id="DsBan">
+		<%
+			friends.forEach(e=>{%>
+				<div class="friend" id="<%-e['ID']%>">
+					<div id="hinhanh">
+						<img src="/HinhAnh/<%-e['AVATAR']%>">
+					</div>
+					<div id="thongtin">
+						<div id="ten"><%-e['ID']%></div>
+						<%if(e['LASTTIME']==null){%>
+							<div id="hoatdong" style="color: green">đang hoạt động</div>
+						<%}else{%>
+							<div id="hoatdong" style="color: red">
+								<%=(new Date(e['LASTTIME'])).toLocaleString()%>
+							</div>
+						<%}%>
+					</div>
+				</div>		
+			<%});
+		%>
+	</div>
+</div>
+
+<div id="KhungChat">
+	<div id="HeaderChatBox">
+		<div id="AnhNguoiChat"><img src="/HinhAnh/default.jpg"></div>
+		<div id="TenNguoiChat">Chọn cuộc trò chuyện</div>
+		<div id="ConverID" hidden="true"></div>
+		<div id="receiverID" hidden="true"></div>
+	</div>
+	
+	<div id="NoiDungChat">
+		<!--<div class="mesGui">
+		 	<div id="tgGui">22/05/2019</div>
+		 	<div id="mes">xin chào &#128540;</div>
+		 	<div id="tgXem">22/05/2020</div>
+		 </div>
+		 <div class="mesNhan">
+		 	<div id="tgGui">22/05/2019</div>
+		 	<div id="mes">xin chào asdasd sdasdas sadasd &#128540;</div>
+		 	<div id="tgXem">22/05/2020</div>
+		 </div>
+		-->
+	</div>
+	<div id="sendMes">
+		<textarea id="inputMes" cols="70" rows="3" disabled></textarea>
+		<input type="button" name="Gui" id="Gui" value="Gửi" disabled>
+		<div id="icon">
+			Icon &#128512;
+			<div id="listIcon">
+				<div>&#128512;</div>
+				<div>&#128513;</div>
+				<div>&#128514;</div>
+				<div>&#128515;</div>
+				<div>&#128516;</div>
+				<div>&#128517;</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="CuocTroChuyen">
+	<center><div id="TieuDeDsTroChuyen">Cuộc trò chuyện</div></center>
+	<hr/>
+	<div id="DsTroChuyen">
+		<%
+			convers.forEach(e=>{%>
+				<%if(e['OWNERSEEN']==false){%>
+					<div class="conversation" id="<%-e['CONVERSID']%>" style="color:green">
+				<%}else{%>
+					<div class="conversation" id="<%-e['CONVERSID']%>">
+				<%}%>
+						<div id="hinhanh">
+							<%if(e['AVATAR']!=null){%>
+								<img src="/HinhAnh/<%-e['AVATAR']%>">
+							<%}else{%>
+								<img src="/HinhAnh/default.jpg">
+							<%}%>
+						</div>
+						<div id="thongtin">
+							<div id="receiverID" hidden="true"><%-e['RECEIVER']%></div>
+							<%if(e['RECEIVER']!=null){%>
+								<div id="ten"><%-e['RECEIVER']%></div>
+							<%}else{%>
+								<div id="ten">Không xác định</div>
+							<%}%>
+							<div id="lastMes"><%-e['LASTMES'].replace(/<br>/g,' ')%></div>
+						</div>
+					</div>		
+				<%});
+		%>
+	</div>
+</div>
